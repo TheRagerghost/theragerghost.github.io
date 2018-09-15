@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+@keyframes avatar-onhover {
+  from { border-radius: 50%;}
+  to { border-radius: 20%;}
+}
+
+@keyframes avatar-offhover {
+  from { border-radius: 20%;}
+  to { border-radius: 50%;}
+}
+
+@keyframes startup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Vollkorn', serif;
+}
+
+p {
+  text-align: left;
+  text-indent: 16px;
+}
+
+.info-table{
+  text-align: center;
+  margin: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-collapse: collapse;
+  border-style: double;
+  border-color: black;
+  border-width: 8px;
+}
+
+.pros-cons{
+  text-align: center;
+  border-collapse: collapse;
+  border-style: none;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+td {
+  padding: 10px;
+}
+
+.column {
+  width: 30%;
+  float: left;
+}
+
+.list-table {
+  padding-left: 35%;
+  list-style-type: square;
+  text-align: left;
+}
+
+img.bg-image {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 102%;
+  height: 102%;
+  position: fixed;
+  top: -1%;
+  left: -1%;
+  filter: blur(4px);
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg-image {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+
+.main-container {
+  margin-top: 200px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.main-avatar {
+  animation-name: avatar-offhover;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  border-style: double;
+  border-color: black;
+  border-width: 8px;
+}
+
+.main-avatar:hover {
+  animation-name: avatar-onhover;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  border-style: double;
+  border-color: black;
+  border-width: 8px;
+}
+
+#main-content {
+  border-radius: 35px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -200px;
+  margin-bottom: 10%;
+  padding-top: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+#sub-content {
+  width: 100%;
+  height: 100%;
+}
+
+#page-wrap {
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-name: startup;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+#name-main{
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  color: #000000;
+}
+
+#name-aka{
+  font-size: 12px;
+  margin-top: 2px;
+  color: #5f5f5f;
+}
