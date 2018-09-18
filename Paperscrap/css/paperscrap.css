@@ -97,6 +97,11 @@
 /* For devices smaller than 750px */
 @media (min-width: 550px) and (max-width:749px) {
 
+  .showcase {
+    height: 300px;
+    padding-top: 120px;
+  }
+
   .one.case:nth-child(4n+1),
   .two.case:nth-child(2n+1),
   .three.case:nth-child(n+1),
