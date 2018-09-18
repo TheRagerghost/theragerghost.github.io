@@ -61,7 +61,7 @@
 /* For devices smaller than 550px */
 @media (max-width: 549px) {
 
-  .showcase {height: 600px;}
+  .showcase {height: 500px;}
   .case { margin-left: 0; width: 100%; background-color: var(--clr-marker);}
 }
 
