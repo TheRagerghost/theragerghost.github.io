@@ -1,0 +1,32 @@
+/*
+  This file contains various colors in form of classes. General idea is to provide easy color swap right from html and easy color tweak from single css.
+*/
+
+:root {
+  /* Grayscale */
+  --clr-white:          #ffffff;
+  --clr-vlitgray:       #c2c0c2;
+  --clr-litgray:        #9d9a9c;
+  --clr-gray:           #767476;
+  --clr-drkgray:        #4c4d4f;
+  --clr-vdarkgray:      #262629;
+  --clr-black:          #000000;
+
+  /* Rainbow */
+  --clr-red:            #d94c4c;
+  --clr-orange:         #ed7f53;
+  --clr-yellow:         #f0c256;
+  --clr-green:          #21a661;
+  --clr-blue:           #0a9bb8;
+  --clr-indigo:         #096eaf;
+  --clr-violet:         #9542a6;
+
+  /* Support */
+  --clr-marker:         transparent;
+
+  --clr-litorange:      #f2a955;
+  --clr-cyan:           #09a396;
+  --clr-pink:           #e07ebf;
+  --clr-magenta:        #b32d76;
+
+}
