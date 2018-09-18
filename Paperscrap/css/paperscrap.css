@@ -46,8 +46,8 @@
 
   .showcase {
     margin-left: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 0;
+    height: 500px;
   }
 
   /* For devices larger than 400px */
@@ -61,7 +61,6 @@
 /* For devices smaller than 550px */
 @media (max-width: 549px) {
 
-  .showcase {height: 400px;}
   .case { margin-left: 0; width: 100%; background-color: var(--clr-marker);}
 }
 
@@ -95,8 +94,6 @@
 
 /* For devices smaller than 750px */
 @media (min-width: 550px) and (max-width:749px) {
-
-  .showcase {height: 400px;}
 
   .one.case:nth-child(4n+1),
   .two.case:nth-child(2n+1),
@@ -146,8 +143,6 @@
 /* For devices smaller than 1000px */
 @media (min-width: 750px) and (max-width:999px) {
 
-  .showcase {height: 500px;}
-
   .case:first-child,
   .one.case:nth-child(8n+1),
   .two.case:nth-child(4n+1),
@@ -169,8 +164,6 @@
   .shelf {
     width: 90%;
   }
-
-  .showcase {height: 600px;}
 
   .one.case:nth-child(12n+1),
   .two.case:nth-child(6n+1),
