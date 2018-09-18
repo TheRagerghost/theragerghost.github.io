@@ -48,8 +48,8 @@
     align-items: flex-start;
     margin-left: 0;
     margin-top: 0;
-    height: 500px;
-    padding-top: 200px;
+    height: 400px;
+    padding-top: 150px;
   }
 
   /* For devices larger than 400px */
@@ -96,11 +96,6 @@
 
 /* For devices smaller than 750px */
 @media (min-width: 550px) and (max-width:749px) {
-
-  .showcase {
-    height: 150px;
-    padding-top: 40px;
-  }
 
   .one.case:nth-child(4n+1),
   .two.case:nth-child(2n+1),
