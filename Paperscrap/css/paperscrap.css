@@ -14,7 +14,7 @@
   box-sizing: border-box; }
 
 .shelf {
-  /* background-color: var(--clr-litgray); */
+  /*background-color: var(--clr-litgray);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@
 
 .showcase,
 .case {
-  /* background-color: var(--clr-vlitgray); */
+  /*background-color: var(--clr-vlitgray);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,9 +47,8 @@
   .showcase {
     align-items: flex-start;
     margin-left: 0;
-    margin-top: 0;
-    height: 400px;
-    padding-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   /* For devices larger than 400px */
@@ -250,7 +249,9 @@ p {
 /* BUTTONS */
 
 a.button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   height: 1.8em;
   padding: 0.3em 0.8em;
@@ -264,10 +265,6 @@ a.button {
   letter-spacing: 0.05rem;
   white-space: nowrap;
 
-  color: black;
-  background-color: transparent;
-  border-color: transparent;
-
   border-width: 0px;
   border-style: solid;
   border-radius: 16px;
@@ -280,8 +277,13 @@ a.button {
   box-sizing: border-box;
 }
 
+/* FLAT GROUP*/
+
 a.flat.button {
   border-width: 0.1rem;
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 a.flat.general.button {
@@ -310,8 +312,8 @@ a.flat.warning.button {
 }
 
 a.flat.attention.button {
-  color: var(--clr-yellow);
-  border-color: var(--clr-yellow);
+  color: var(--clr-litorange);
+  border-color: var(--clr-litorange);
 }
 
 a.flat.weak.button {
@@ -319,30 +321,113 @@ a.flat.weak.button {
   border-color: var(--clr-litgray);
 }
 
+a.flat.vote.button {
+  color: var(--clr-cyan);
+  border-color: var(--clr-cyan);
+}
+
+a.flat.like.button {
+  color: var(--clr-pink);
+  border-color: var(--clr-pink);
+}
+
+a.flat.back.button {
+  color: var(--clr-magenta);
+  border-color: var(--clr-magenta);
+}
+
 /* I recommend write target = "_self" in a */
 a.flat.disabled.button {
   border-style: dotted;
-  color: var(--clr-litgray);
-  border-color: var(--clr-litgray);
+  color: var(--clr-vlitgray);
+  border-color: var(--clr-vlitgray);
+  pointer-events: none;
 }
 
-a.flat.textonly.button {
+/* ALTERNATE GROUP */
+
+a.alternate.button {
+  border-width: 0.1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-vdarkgray);
+  border: none;
+}
+
+a.alternate.general.button {
+  background-color: var(--clr-vdarkgray);
+}
+
+a.alternate.submit.button {
+  background-color: var(--clr-green);
+}
+
+a.alternate.alert.button {
+  background-color: var(--clr-red);
+}
+
+a.alternate.info.button {
+  background-color: var(--clr-blue);
+}
+
+a.alternate.warning.button {
+  background-color: var(--clr-orange);
+}
+
+a.alternate.attention.button {
+  background-color: var(--clr-litorange);
+}
+
+a.alternate.weak.button {
+  background-color: var(--clr-litgray);
+}
+
+a.alternate.vote.button {
+  background-color: var(--clr-cyan);
+}
+
+a.alternate.like.button {
+  background-color: var(--clr-pink);
+}
+
+a.alternate.back.button {
+  background-color: var(--clr-magenta);
+}
+
+/* I recommend write target = "_self" in a */
+a.alternate.disabled.button {
+  background-color: var(--clr-vlitgray);
+  pointer-events: none;
+}
+
+/* OTHER BUTTONS */
+
+a.textonly.button {
   color: var(--clr-vdarkgray);
-  border-width: 0;
 }
 
 a.flat.button:hover {
   box-shadow: 0 2px 10px 0 var(--clr-vlitgray);
 }
 
-a.flat.textonly.button:hover {
+a.alternate.button:hover {
+  box-shadow: 0 2px 10px 0 var(--clr-litgray);
+}
+
+a.textonly.button:hover {
   box-shadow: none;
   color: var(--clr-indigo);
 }
 
 a.flat.disabled.button:hover {
   box-shadow: none;
-  cursor: not-allowed;
+  color: var(--clr-vlitgray);
+  border-color: var(--clr-vlitgray);
+}
+
+a.alternate.disabled.button:hover {
+  box-shadow: none;
+  color: var(--clr-vlitgray);
+  border-style: double;
 }
 
 /* UTILITY */
