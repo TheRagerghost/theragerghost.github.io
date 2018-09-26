@@ -21,7 +21,7 @@
   border-style: solid;
   border-radius: 16px;
 
-  transition: 0.15s ease-out;
+  transition: 0.1s linear;
   cursor: pointer;
 
   box-sizing: border-box;
@@ -233,3 +233,89 @@
 .darken:hover {
   filter: brightness(85%);
 }
+
+/* BUTTON GROUPS*/
+
+.gobuttons {
+  /*background-color: var(--litgray);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.gobuttons.red .gobutton {
+  border-right: 2px solid var(--red);
+}
+
+.gobuttons.orange .gobutton {
+  border-right: 2px solid var(--orange);
+}
+
+.gobuttons.yellow .gobutton {
+  border-right: 2px solid var(--yellow);
+}
+
+.gobuttons.green .gobutton {
+  border-right: 2px solid var(--green);
+}
+
+.gobuttons.blue .gobutton {
+  border-right: 2px solid var(--blue);
+}
+
+.gobuttons .gobutton,
+.gobuttons.indigo .gobutton {
+  border-right: 2px solid var(--indigo);
+}
+
+.gobuttons.violet .gobutton {
+  border-right: 2px solid var(--violet);
+}
+
+.gobuttons.lightgray .gobutton {
+  border-right: 2px solid var(--litgray);
+}
+
+.gobuttons.lightorange .gobutton {
+  border-right: 2px solid var(--litorange);
+}
+
+.gobuttons.cyan .gobutton {
+  border-right: 2px solid var(--cyan);
+}
+
+.gobuttons.pink .gobutton {
+  border-right: 2px solid var(--pink);
+}
+
+.gobuttons.magenta .gobutton {
+  border-right: 2px solid var(--magenta);
+}
+
+.gobutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 1.8em;
+  margin: 0.5em 0;
+  padding: 0 0.5em;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+
+  transition: 0.1s linear;
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.gobuttons .gobutton:last-child { border: none;}

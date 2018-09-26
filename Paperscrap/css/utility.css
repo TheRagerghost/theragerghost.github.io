@@ -36,4 +36,8 @@
 .noleftoffset { margin-left: 0 !important;}
 .leftoffset {margin-left: var(--case-margin) !important;}
 
+.tupp {text-transform: uppercase !important;}
+.tcap {text-transform: capitalize !important;}
+.tlow {text-transform: lowercase !important;}
+
 /* PALETTE */
