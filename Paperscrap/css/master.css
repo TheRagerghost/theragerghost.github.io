@@ -2,21 +2,3 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import "paperscrap.css"; /* Core Papercut */
 @import "normalize.css"; /* Just a copypaste from http://getskeleton.com */
-
-/* Body and Html */
-body{
-  font-size: 62.5%;
-}
-
-html {
-  font-size: 1.5em;
-  line-height: 1.5;
-  font-weight: normal;
-  font-family: 'Rubik', sans-serif;
-  color: var(--clr-vdarkgray);
-}
-
-/* Override for better compatibility */
-.button:hover {
-
-}

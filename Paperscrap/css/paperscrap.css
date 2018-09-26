@@ -1,7 +1,23 @@
-@import "palette.css";
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import "typography.css";
+@import "buttons.css";
+@import "utility.css";
+@import "normalize.css";
 
-:root {
-  --case-margin: 1.5%;
+
+/* BODY AND HTML */
+
+body{
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: normal;
+  font-family: 'Rubik', sans-serif;
+  color: var(--vdrkgray);
 }
 
 /* LAYOUT */
@@ -14,7 +30,7 @@
   box-sizing: border-box; }
 
 .shelf {
-  /*background-color: var(--clr-litgray);*/
+  /*background-color: var(--litgray);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +46,8 @@
   box-sizing: border-box;
 }
 
-.showcase,
 .case {
-  /*background-color: var(--clr-vlitgray);*/
+  /*background-color: var(--vlitgray);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,35 +59,38 @@
   margin-top: var(--case-margin);
   box-sizing: border-box;}
 
-  .showcase {
-    align-items: flex-start;
-    margin-left: 0;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
-  /* For devices larger than 400px */
-@media (min-width: 400px) {
-
-  .shelf {
-    width: 90%;
-  }
-}
-
-/* For devices smaller than 550px */
-@media (max-width: 549px) {
-
-  .case { margin-left: 0; width: 100%; background-color: var(--clr-marker);}
-}
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For phones */
+@media (min-width: 400px) and (max-width: 549px) {
 
   .shelf {
     width: 90%;
   }
 
-  /* Width values */
+  .case { margin-left: 0; width: 100%; background-color: var(--marker);}
+}
+
+
+/* For phablets */
+@media (min-width: 550px) and (max-width:749px) {
+
+  .one.case:nth-child(4n+1),
+  .two.case:nth-child(2n+1),
+  .three.case:nth-child(n+1),
+  .four.case:nth-child(n),
+  .five.case:nth-child(n),
+  .six.case:nth-child(n),
+  .seven.case:nth-child(n),
+  .eight.case:nth-child(n),
+  .nine.case:nth-child(n),
+  .ten.case:nth-child(n),
+  .eleven.case:nth-child(n),
+.twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
+
+  .shelf {
+    width: 90%;
+      }
+
+    /* Width values */
   .one.case                                   { width: 23.875%;        }
   .two.case                                   { width: 49.25%;         }
   .three.case, .fourth.case                   { width: 74.625%;        }
@@ -90,32 +108,28 @@
   .one-offset.case                            { margin-left: 8.4583333333%;  }
   .two-offset.case, .half-offset.case         { margin-left: 16.9166666667%; }
   .three-offset.case                          { margin-left: 25.375%;        }
-
 }
 
-/* For devices smaller than 750px */
-@media (min-width: 550px) and (max-width:749px) {
-
-  .one.case:nth-child(4n+1),
-  .two.case:nth-child(2n+1),
-  .three.case:nth-child(n+1),
-  .four.case:nth-child(n),
-  .five.case:nth-child(n),
-  .six.case:nth-child(n),
-  .seven.case:nth-child(n),
-  .eight.case:nth-child(n),
-  .nine.case:nth-child(n),
-  .ten.case:nth-child(n),
-  .eleven.case:nth-child(n),
-  .twelve.case:nth-child(n) { margin-left: 0; background-color: var(--clr-marker);}
-}
-
-/* For devices larger than 750px */
-@media (min-width: 750px) {
+/* For tablets */
+@media (min-width: 750px) and (max-width:999px) {
 
   .shelf {
     width: 90%;
   }
+
+  .case:first-child,
+  .one.case:nth-child(8n+1),
+  .two.case:nth-child(4n+1),
+  .three.case:nth-child(2n+1),
+  .four.case:nth-child(2n+1),
+  .five.case:nth-child(n+1),
+  .six.case:nth-child(n+1),
+  .seven.case:nth-child(n+1),
+  .eight.case:nth-child(n),
+  .nine.case:nth-child(n),
+  .ten.case:nth-child(n),
+  .eleven.case:nth-child(n),
+  .twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
 
   /* Width values */
   .one.case                                   { width: 11.1875%;       }
@@ -141,29 +155,11 @@
   .seven-offset.case                          { margin-left: 59.2083333333%; }
 }
 
-/* For devices smaller than 1000px */
-@media (min-width: 750px) and (max-width:999px) {
-
-  .case:first-child,
-  .one.case:nth-child(8n+1),
-  .two.case:nth-child(4n+1),
-  .three.case:nth-child(2n+1),
-  .four.case:nth-child(2n+1),
-  .five.case:nth-child(n+1),
-  .six.case:nth-child(n+1),
-  .seven.case:nth-child(n+1),
-  .eight.case:nth-child(n),
-  .nine.case:nth-child(n),
-  .ten.case:nth-child(n),
-  .eleven.case:nth-child(n),
-  .twelve.case:nth-child(n) { margin-left: 0; background-color: var(--clr-marker);}
-}
-
-/* For devices larger than 1000px */
+/* For larger screens */
 @media (min-width: 1000px) {
 
   .shelf {
-    width: 90%;
+    width: 85%;
   }
 
   .one.case:nth-child(12n+1),
@@ -177,7 +173,7 @@
   .nine.case:nth-child(n+1),
   .ten.case:nth-child(n+1),
   .eleven.case:nth-child(n+1),
-  .twelve.case:nth-child(n) { margin-left: 0; background-color: var(--clr-marker);}
+  .twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
 
   /* Width values */
   .one.case                                   { width: 6.9583333333%;  }
@@ -223,231 +219,3 @@
   content: "";
   display: table;
   clear: both; }
-
-/* TYPOGRAPHY */
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  font-weight: bold;
-  margin: 0.4em 0 0.6em 0;
-  cursor: default;
-}
-
-h1 {font-size: 2em;}
-h2 {font-size: 1.75em;}
-h3 {font-size: 1.5em;}
-h4 {font-size: 1.25em;}
-h5 {font-size: 1em;}
-h6 {font-size: 0.75em;}
-
-p {
-  padding: 0.1em 1.25em;
-  font-size: 0.9em;
-  cursor: default;
-}
-
-/* BUTTONS */
-
-a.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 1.8em;
-  padding: 0.3em 0.8em;
-  margin: 0.5em;
-
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.1em;
-  line-height: 1.8em;
-  letter-spacing: 0.05rem;
-  white-space: nowrap;
-
-  border-width: 0px;
-  border-style: solid;
-  border-radius: 16px;
-
-  transition: 0.1s ease-out;
-  cursor: pointer;
-
-  text-align: center;
-  line-height: 1;
-  box-sizing: border-box;
-}
-
-/* FLAT GROUP*/
-
-a.flat.button {
-  border-width: 0.1rem;
-  color: black;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-a.flat.general.button {
-  color: var(--clr-vdarkgray);
-  border-color: var(--clr-vdarkgray);
-}
-
-a.flat.submit.button {
-  color: var(--clr-green);
-  border-color: var(--clr-green);
-}
-
-a.flat.alert.button {
-  color: var(--clr-red);
-  border-color: var(--clr-red);
-}
-
-a.flat.info.button {
-  color: var(--clr-blue);
-  border-color: var(--clr-blue);
-}
-
-a.flat.warning.button {
-  color: var(--clr-orange);
-  border-color: var(--clr-orange);
-}
-
-a.flat.attention.button {
-  color: var(--clr-litorange);
-  border-color: var(--clr-litorange);
-}
-
-a.flat.weak.button {
-  color: var(--clr-litgray);
-  border-color: var(--clr-litgray);
-}
-
-a.flat.vote.button {
-  color: var(--clr-cyan);
-  border-color: var(--clr-cyan);
-}
-
-a.flat.like.button {
-  color: var(--clr-pink);
-  border-color: var(--clr-pink);
-}
-
-a.flat.back.button {
-  color: var(--clr-magenta);
-  border-color: var(--clr-magenta);
-}
-
-/* I recommend write target = "_self" in a */
-a.flat.disabled.button {
-  border-style: dotted;
-  color: var(--clr-vlitgray);
-  border-color: var(--clr-vlitgray);
-  pointer-events: none;
-}
-
-/* ALTERNATE GROUP */
-
-a.alternate.button {
-  border-width: 0.1rem;
-  color: var(--clr-white);
-  background-color: var(--clr-vdarkgray);
-  border: none;
-}
-
-a.alternate.general.button {
-  background-color: var(--clr-vdarkgray);
-}
-
-a.alternate.submit.button {
-  background-color: var(--clr-green);
-}
-
-a.alternate.alert.button {
-  background-color: var(--clr-red);
-}
-
-a.alternate.info.button {
-  background-color: var(--clr-blue);
-}
-
-a.alternate.warning.button {
-  background-color: var(--clr-orange);
-}
-
-a.alternate.attention.button {
-  background-color: var(--clr-litorange);
-}
-
-a.alternate.weak.button {
-  background-color: var(--clr-litgray);
-}
-
-a.alternate.vote.button {
-  background-color: var(--clr-cyan);
-}
-
-a.alternate.like.button {
-  background-color: var(--clr-pink);
-}
-
-a.alternate.back.button {
-  background-color: var(--clr-magenta);
-}
-
-/* I recommend write target = "_self" in a */
-a.alternate.disabled.button {
-  background-color: var(--clr-vlitgray);
-  pointer-events: none;
-}
-
-/* OTHER BUTTONS */
-
-a.textonly.button {
-  color: var(--clr-vdarkgray);
-}
-
-a.flat.button:hover {
-  box-shadow: 0 2px 10px 0 var(--clr-vlitgray);
-}
-
-a.alternate.button:hover {
-  box-shadow: 0 2px 10px 0 var(--clr-litgray);
-}
-
-a.textonly.button:hover {
-  box-shadow: none;
-  color: var(--clr-indigo);
-}
-
-a.flat.disabled.button:hover {
-  box-shadow: none;
-  color: var(--clr-vlitgray);
-  border-color: var(--clr-vlitgray);
-}
-
-a.alternate.disabled.button:hover {
-  box-shadow: none;
-  color: var(--clr-vlitgray);
-  border-style: double;
-}
-
-/* UTILITY */
-
-.noleftoffset { margin-left: 0 !important;}
-.leftoffset {margin-left: var(--case-margin) !important;}
-
-/* MEDIA */
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
-@media (min-width: 550px) {}
-
-/* Larger than tablet (also point when grid becomes active)*/
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
