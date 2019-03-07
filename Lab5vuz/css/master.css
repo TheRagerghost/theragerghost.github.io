@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import "typography.css";
+@import "buttons.css";
+@import "utility.css";
+@import "normalize.css";
+
+
+/* BODY AND HTML */
+
+body{
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: normal;
+  font-family: 'Rubik', sans-serif;
+  color: var(--vdrkgray);
+}
+
+/* LAYOUT */
+
+.reality {
+  background-image: url("back.jpg");
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.shelf {
+  /*background-color: var(--litgray);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60.9375%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.toprow {
+  background-image: url("TopImg.jpg");
+  background-size:contain;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.case {
+  /*background-color: var(--vlitgray);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  transition: 0.15s;
+  box-sizing: border-box;
+}
+
+/* For phones */
+@media (min-width: 400px) and (max-width: 549px) {
+
+}
+
+/* For phablets */
+@media (min-width: 550px) and (max-width:749px) {
+
+}
+
+/* For tablets */
+@media (min-width: 750px) and (max-width:999px) {
+
+}
+
+/* For larger screens */
+@media (min-width: 1000px) {
+
+  /* Width values */
+  .one.case                                   { width: 8.3333333333%;  }
+  .two.case                                   { width: 16.6666666667%; }
+  .three.case, .fourth.case                   { width: 25%;            }
+  .four.case, .third.case                     { width: 33.3333333333%; }
+  .five.case                                  { width: 41.6666666667%; }
+  .six.case, .half.case                       { width: 50%;            }
+  .seven.case                                 { width: 58.3333333333%; }
+  .eight.case, .two-third.case                { width: 66.6666666667%; }
+  .nine.case, .three-fourth.case              { width: 75%;            }
+  .ten.case                                   { width: 83.3333333333%; }
+  .eleven.case                                { width: 91.6666666667%; }
+  .twelve.case                                { width: 100%;           }
+
+  /* Offsets */
+  .one-offset.case                            { margin-left: 8.3333333333%;  }
+  .two-offset.case                            { margin-left: 16.6666666667%; }
+  .three-offset.case                          { margin-left: 25%;            }
+  .four-offset.case                           { margin-left: 33.3333333333%; }
+  .five-offset.case                           { margin-left: 41.6666666667%; }
+  .six-offset.case                            { margin-left: 50%;            }
+  .seven-offset.case                          { margin-left: 58.3333333333%; }
+  .eight-offset.case                          { margin-left: 66.6666666667%; }
+  .nine-offset.case                           { margin-left: 75%;            }
+  .ten-offset.case                            { margin-left: 83.3333333333%; }
+  .eleven-offset.case                         { margin-left: 91.6666666667%; }
+
+  .one-third-offset.case                      { margin-left: 33.3333333333%; }
+  .two-third-offset.case                      { margin-left: 66.6666666667%; }
+  .one-fourth-offset.case                     { margin-left: 25%;            }
+  .two-fourth-offset.case, .half-offset.case  { margin-left: 50%;            }
+  .three-fourth-offset.case                   { margin-left: 75%;            }
+}
+
+
+
+
+.layout:after,
+.row:after,
+.shelf:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
