@@ -1,0 +1,43 @@
+
+:root {
+
+  --case-margin: 1.5%;
+
+  /* COLORS */
+  /* Grayscale */
+  --white:          #ffffff;
+  --vlitgray:       #c2c0c2;
+  --litgray:        #9d9a9c;
+  --gray:           #767476;
+  --drkgray:        #4c4d4f;
+  --vdrkgray:      #262629;
+  --black:          #000000;
+
+  /* Rainbow */
+  --red:            #d94c4c;
+  --orange:         #ed7f53;
+  --yellow:         #f0c256;
+  --green:          #21a661;
+  --blue:           #0a9bb8;
+  --indigo:         #096eaf;
+  --violet:         #9542a6;
+
+  /* Support */
+  --marker:         #09a396;
+
+  --litorange:      #f2a955;
+  --cyan:           #09a396;
+  --pink:           #e07ebf;
+  --magenta:        #b32d76;
+}
+
+/* UTILITY */
+
+.noleftoffset { margin-left: 0 !important;}
+.leftoffset {margin-left: var(--case-margin) !important;}
+
+.tupp {text-transform: uppercase !important;}
+.tcap {text-transform: capitalize !important;}
+.tlow {text-transform: lowercase !important;}
+
+/* PALETTE */

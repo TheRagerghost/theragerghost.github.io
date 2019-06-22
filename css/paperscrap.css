@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import "typography.css";
+@import "buttons.css";
+@import "utility.css";
+@import "normalize.css";
+
+
+/* BODY AND HTML */
+
+body{
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-weight: normal;
+  font-family: 'Rubik', sans-serif;
+  color: var(--vdrkgray);
+}
+
+/* LAYOUT */
+
+.layout {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.shelf {
+  /*background-color: var(--litgray);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.case {
+  /*background-color: var(--vlitgray);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  transition: 0.15s;
+  border-radius: 12px;
+  margin-left: var(--case-margin);  /* If you change this value, recalculate all .case selectors width. There is exe prepared for this in Utility folder. Making it higher, than 4 not recommended.*/
+  margin-top: var(--case-margin);
+  box-sizing: border-box;}
+
+/* For phones */
+@media (min-width: 400px) and (max-width: 549px) {
+
+  .shelf {
+    width: 90%;
+  }
+
+  .case { margin-left: 0; width: 100%; /*background-color: var(--marker);*/}
+}
+
+
+/* For phablets */
+@media (min-width: 550px) and (max-width:749px) {
+
+  .one.case:nth-child(4n+1),
+  .two.case:nth-child(2n+1),
+  .three.case:nth-child(n+1),
+  .four.case:nth-child(n),
+  .five.case:nth-child(n),
+  .six.case:nth-child(n),
+  .seven.case:nth-child(n),
+  .eight.case:nth-child(n),
+  .nine.case:nth-child(n),
+  .ten.case:nth-child(n),
+  .eleven.case:nth-child(n),
+.twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
+
+  .shelf {
+    width: 90%;
+      }
+
+    /* Width values */
+  .one.case                                   { width: 23.875%;        }
+  .two.case                                   { width: 49.25%;         }
+  .three.case, .fourth.case                   { width: 74.625%;        }
+  .four.case, .third.case                     { width: 100%;           }
+  .five.case                                  { width: 100%;           }
+  .six.case, .half.case                       { width: 100%;           }
+  .seven.case                                 { width: 100%;           }
+  .eight.case, .two-third.case                { width: 100%;           }
+  .nine.case, .three-fourth.case              { width: 100%;           }
+  .ten.case                                   { width: 100%;           }
+  .eleven.case                                { width: 100%;           }
+  .twelve.case                                { width: 100%;           }
+
+  /* Offsets */
+  .one-offset.case                            { margin-left: 8.4583333333%;  }
+  .two-offset.case, .half-offset.case         { margin-left: 16.9166666667%; }
+  .three-offset.case                          { margin-left: 25.375%;        }
+}
+
+/* For tablets */
+@media (min-width: 750px) and (max-width:999px) {
+
+  .shelf {
+    width: 90%;
+  }
+
+  .case:first-child,
+  .one.case:nth-child(8n+1),
+  .two.case:nth-child(4n+1),
+  .three.case:nth-child(2n+1),
+  .four.case:nth-child(2n+1),
+  .five.case:nth-child(n+1),
+  .six.case:nth-child(n+1),
+  .seven.case:nth-child(n+1),
+  .eight.case:nth-child(n),
+  .nine.case:nth-child(n),
+  .ten.case:nth-child(n),
+  .eleven.case:nth-child(n),
+  .twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
+
+  /* Width values */
+  .one.case                                   { width: 11.1875%;       }
+  .two.case                                   { width: 23.875%;        }
+  .three.case, .fourth.case                   { width: 36.5625%;       }
+  .four.case, .third.case                     { width: 49.25%;         }
+  .five.case                                  { width: 61.9375%;       }
+  .six.case, .half.case                       { width: 74.625%;        }
+  .seven.case                                 { width: 87.3125%;       }
+  .eight.case, .two-third.case                { width: 100%;           }
+  .nine.case, .three-fourth.case              { width: 100%;           }
+  .ten.case                                   { width: 100%;           }
+  .eleven.case                                { width: 100%;           }
+  .twelve.case                                { width: 100%;           }
+
+  /* Offsets */
+  .one-offset.case                            { margin-left: 8.4583333333%;  }
+  .two-offset.case                            { margin-left: 16.9166666667%; }
+  .three-offset.case                          { margin-left: 25.375%;        }
+  .four-offset.case, .half-offset.case        { margin-left: 33.8333333333%; }
+  .five-offset.case                           { margin-left: 42.2916666667%; }
+  .six-offset.case                            { margin-left: 50.75%;         }
+  .seven-offset.case                          { margin-left: 59.2083333333%; }
+}
+
+/* For larger screens */
+@media (min-width: 1000px) {
+
+  .shelf {
+    width: 85%;
+  }
+
+  .one.case:nth-child(12n+1),
+  .two.case:nth-child(6n+1),
+  .three.case:nth-child(4n+1),
+  .four.case:nth-child(3n+1),
+  .five.case:nth-child(2n+1),
+  .six.case:nth-child(2n+1),
+  .seven.case:nth-child(n+1),
+  .eight.case:nth-child(n+1),
+  .nine.case:nth-child(n+1),
+  .ten.case:nth-child(n+1),
+  .eleven.case:nth-child(n+1),
+  .twelve.case:nth-child(n) { margin-left: 0; /*background-color: var(--marker);*/}
+
+  /* Width values */
+  .one.case                                   { width: 6.9583333333%;  }
+  .two.case                                   { width: 15.4166666667%; }
+  .three.case, .fourth.case                   { width: 23.875%;        }
+  .four.case, .third.case                     { width: 32.3333333333%; }
+  .five.case                                  { width: 40.7916666667%; }
+  .six.case, .half.case                       { width: 49.25%;         }
+  .seven.case                                 { width: 57.7083333333%; }
+  .eight.case, .two-third.case                { width: 66.1666666667%; }
+  .nine.case, .three-fourth.case              { width: 74.625%;        }
+  .ten.case                                   { width: 83.0833333333%; }
+  .eleven.case                                { width: 91.5416666667%; }
+  .twelve.case                                { width: 100%;           }
+
+  /* Offsets */
+  .one-offset.case                            { margin-left: 8.4583333333%;  }
+  .two-offset.case                            { margin-left: 16.9166666667%; }
+  .three-offset.case                          { margin-left: 25.375%;        }
+  .four-offset.case                           { margin-left: 33.8333333333%; }
+  .five-offset.case                           { margin-left: 42.2916666667%; }
+  .six-offset.case                            { margin-left: 50.75%;         }
+  .seven-offset.case                          { margin-left: 59.2083333333%; }
+  .eight-offset.case                          { margin-left: 67.6666666667%; }
+  .nine-offset.case                           { margin-left: 76.125%;        }
+  .ten-offset.case                            { margin-left: 84.5833333333%; }
+  .eleven-offset.case                         { margin-left: 93.0416666667%; }
+
+  .one-third-offset.case                      { margin-left: 33.8333333333%; }
+  .two-third-offset.case                      { margin-left: 67.6666666667%; }
+  .one-fourth-offset.case                     { margin-left: 25.375%;        }
+  .two-fourth-offset.case, .half-offset.case  { margin-left: 50.75%;         }
+  .three-fourth-offset.case                   { margin-left: 76.125%;        }
+}
+
+
+
+
+.layout:after,
+.row:after,
+.shelf:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
